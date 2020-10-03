@@ -25,8 +25,6 @@ public class AppsTest {
         for (int i = 1; i < data.length; i++) {
             String name=data[i][1];
             String job=data[i][2];
-//            System.out.println("name = " + name);
-//            System.out.println("job = " + job);
             String id = ResReqDemo.createDetailsViaApiUsingPost(name, job);
             if(!id.isEmpty()) {
                 details.add(new Details(name, job, id));

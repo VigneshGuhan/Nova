@@ -30,10 +30,9 @@ public class ResReqDemo {
                                    .when().post();
 
         int statusCode = response.getStatusCode();
-      //  System.out.println("statusCode = " + statusCode);
         if(statusCode==201){
+			Assert.assertTrue("User id created",true);
             String s = response.getBody().asString();
-          //  System.out.println("s = " + s);
             return   response.path("id").toString();
         }
         else {
